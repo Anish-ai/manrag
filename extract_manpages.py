@@ -174,6 +174,15 @@ def main():
     logger.info(f"Total extraction time: {elapsed_time:.2f} seconds")
 
 if __name__ == "__main__":
-    # Set multiprocessing start method
-    multiprocessing.set_start_method('fork')
+    # Create data directory if it doesn't exist
+    os.makedirs("data", exist_ok=True)
+    
+    # Set multiprocessing start method based on OS
+    if os.name == 'posix':
+        # For Linux/macOS
+        multiprocessing.set_start_method('fork')
+    else:
+        # For Windows
+        multiprocessing.set_start_method('spawn')
+    
     main()

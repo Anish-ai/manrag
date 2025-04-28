@@ -1,0 +1,37 @@
+[
+  {
+    "command": "find",
+    "section": "1",
+    "content": "\nFIND(1)                  User Commands                  FIND(1)\n\nNAME\n       find - search for files in a directory hierarchy\n\nSYNOPSIS\n       find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]\n\nDESCRIPTION\n       This  manual  page documents the GNU version of find.  GNU find searches the directory tree rooted at each\n       given starting-point by evaluating the given expression from left to right, according to  the  rules  of\n       precedence (see section OPERATORS), until the outcome is known (the left hand side is false for AND operations,\n       true for OR), at which point find moves on to the next file name.\n\nEXAMPLES\n       find /tmp -name \"*.txt\" -type f\n              Find all text files in /tmp directory\n       \n       find . -type f -name \"*.jpg\" -size +1M\n              Find all JPEG files larger than 1 MB in current directory\n       \n       find /home -user john -mtime -7\n              Find all files owned by john modified in the last 7 days\n\n       find . -name \"*.c\" -o -name \"*.h\"\n              Find all C source and header files\n        ",
+    "id": "find_1",
+    "added_timestamp": 1744151879
+  },
+  {
+    "command": "grep",
+    "section": "1",
+    "content": "\nGREP(1)                  User Commands                  GREP(1)\n\nNAME\n       grep, egrep, fgrep, rgrep - print lines that match patterns\n\nSYNOPSIS\n       grep [OPTIONS] PATTERN [FILE...]\n       grep [OPTIONS] -e PATTERN ... [FILE...]\n       grep [OPTIONS] -f FILE ... [FILE...]\n\nDESCRIPTION\n       grep  searches  for  PATTERN  in  each  FILE.  A FILE of \"-\" stands for standard input.  If no FILE is given,\n       recursive searches examine the working directory, and nonrecursive searches read standard input.\n\nEXAMPLES\n       grep \"hello\" file.txt\n              Search for \"hello\" in file.txt\n       \n       grep -i \"error\" *.log\n              Search for \"error\" (case insensitive) in all .log files\n       \n       grep -r \"TODO\" --include=\"*.py\" .\n              Recursively search for \"TODO\" in all Python files in current directory\n        ",
+    "id": "grep_1",
+    "added_timestamp": 1744151879
+  },
+  {
+    "command": "ls",
+    "section": "1",
+    "content": "\nLS(1)                    User Commands                    LS(1)\n\nNAME\n       ls - list directory contents\n\nSYNOPSIS\n       ls [OPTION]... [FILE]...\n\nDESCRIPTION\n       List  information  about  the FILEs (the current directory by default).  Sort entries alphabetically if none of\n       -cftuvSUX nor --sort is specified.\n\nEXAMPLES\n       ls\n              List files in the current directory\n       \n       ls -l\n              List files in long format\n       \n       ls -la\n              List all files including hidden ones in long format\n       \n       ls -lh\n              List files in long format with human readable sizes\n        ",
+    "id": "ls_1",
+    "added_timestamp": 1744151879
+  },
+  {
+    "command": "cp",
+    "section": "1",
+    "content": "\nCP(1)                    User Commands                    CP(1)\n\nNAME\n       cp - copy files and directories\n\nSYNOPSIS\n       cp [OPTION]... [-T] SOURCE DEST\n       cp [OPTION]... SOURCE... DIRECTORY\n       cp [OPTION]... -t DIRECTORY SOURCE...\n\nDESCRIPTION\n       Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n\nEXAMPLES\n       cp file1 file2\n              Copy file1 to file2\n       \n       cp -r dir1 dir2\n              Copy directory dir1 to dir2 recursively\n       \n       cp -p file1 file2\n              Copy file1 to file2 and preserve mode, ownership, timestamps\n        ",
+    "id": "cp_1",
+    "added_timestamp": 1744151879
+  },
+  {
+    "command": "chmod",
+    "section": "1",
+    "content": "\nCHMOD(1)                 User Commands                 CHMOD(1)\n\nNAME\n       chmod - change file mode bits\n\nSYNOPSIS\n       chmod [OPTION]... MODE[,MODE]... FILE...\n       chmod [OPTION]... OCTAL-MODE FILE...\n       chmod [OPTION]... --reference=RFILE FILE...\n\nDESCRIPTION\n       Change the file mode bits of each FILE to MODE.\n\nEXAMPLES\n       chmod 755 script.sh\n              Make script.sh executable by owner and readable by others\n       \n       chmod u+x file\n              Add execute permission for the owner\n       \n       chmod -R go-w directory\n              Remove write permission for group and others recursively\n        ",
+    "id": "chmod_1",
+    "added_timestamp": 1744151879
+  }
+]

@@ -64,6 +64,9 @@ class OllamaEmbeddingFunction:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Ensure data directory exists
+    os.makedirs(DB_PATH, exist_ok=True)
+    
     # Initialize ChromaDB client
     print("Initializing ChromaDB client...")
     app.client = chromadb.PersistentClient(path=DB_PATH)
